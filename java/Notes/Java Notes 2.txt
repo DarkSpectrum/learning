@@ -1,0 +1,67 @@
+//Conditions and Control Flow
+
+Boolean Operators
+    and ( && ) - Returns true if everything is true
+        System.out.println(true && true); // prints true
+        System.out.println(2 < 3 && 4 < 5); // prints true
+
+    or ( || ) - One expression on either side of || is true.
+        System.out.println(false || true); // prints true
+        System.out.println(2 > 1 || 3 > 4); // prints true, 
+    
+    not ( ! ) - It will return false if the expression is true, and true if the expression is false.
+        System.out.println(!false); // prints true
+        System.out.println( !(4 <= 10) );
+
+Boolean Operators - Precedence
+    The precedence of each Boolean operator is as follows:
+        ! is evaluated first
+        && is evaluated second
+        || is evaluated third
+                System.out.println( !(false) || true && false);
+
+Control Flow - if
+    If the boolean is true, it will evaluate the code block.
+        if (9 > 2) {
+            System.out.println("Control flow rocks!");  
+        }
+
+Control Flow - if else
+    If the boolean is true, it evaluates the first code block, if not, it runs the second.
+        if (1 < 3 && 5 < 4) {
+            System.out.println("I defy the Boolean laws!")
+        } else {
+            System.out.println("You can thank George Boole!");
+        }
+
+Control Flow - If Else If Else
+    If the boolean is true, run the first block, if not, run the next, and repeat!
+        int shoeSize = 10;
+        if (shoeSize > 12) {
+            System.out.println("Sorry, your shoe size is currently not in stock.");
+        } else if (shoeSize >= 6) {
+            System.out.println("Your shoe size is in stock!");
+        }   else {
+            System.out.println("Sorry, this store does not carry shoes smaller than a size 6.");
+        }
+
+Control Flow - Ternary Conditional
+    Minimize a if else statement!
+        int pointsScored = 21;
+        char gameResult = (pointsScored > 20) ? 'W' : 'L';
+        System.out.println(gameResult);
+
+Control Flow - Switch Statement
+    Minimize an if else, if else statement!
+        int restaurantRating = 3;
+        switch (restaurantRating) {
+            case 1: System.out.println("This restaurant is not my favorite.");
+        break;
+             case 2: System.out.println("This restaurant is good.");
+        break;
+            case 3: System.out.println("This restaurant is fantastic!");
+        break;
+            default: System.out.println("I've never dined at this restaurant.");
+        break;
+        }
+

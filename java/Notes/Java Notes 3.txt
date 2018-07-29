@@ -1,0 +1,144 @@
+//Object Oriented Programming
+
+Class: a blueprint for how a data structure should function
+Constructor: instructs the class to set up the initial state of an object
+Object: instance of a class that stores the state of a class
+Method: set of instructions that can be called on an object
+Parameter: values that can be specified when creating an object or calling a method
+Return value: specifies the data type that a method will return after it runs
+Inheritance: allows one class to use functionality defined in another class
+
+Classes
+    A class is a set of instructions that describe how a data structure should behave.
+    Java has it's own pre-defined classes, but we can make our own too.
+        class Car {
+
+        }
+
+Class Constructors
+    A constructor allows us to create class instances. We can set information about the class.
+        class Car {
+            //The class constructor for the Car class
+            public Car() {
+            }
+        }
+
+Class Instance Variables
+    When we create a new class, we probably have specific details that we want the class to include.
+        class Car {
+
+        //Instance Variable
+            int modelYear;
+
+            public Car() {
+            }
+}
+
+Class Constructor Parameters
+    More indepth paramaters, just for the public section.
+        class Car {
+
+            //Instance Variable
+            int modelYear;
+
+            public Car(int year) {
+
+                modelYear = year;
+            }
+        }
+
+Objects
+    We must create an instance of the class. An instance of a class is known as an object in Java.
+        class Car {
+            int modelYear;
+
+            public Car(int year) {
+                modelYear = year;
+                }
+
+            public static void main(String[] args){
+            Car myFastCar = new Car(2007);
+
+                }
+            }
+
+Methods
+    A method is a pre-defined set of instructions. Methods are declared within a class.
+    Java provides some pre-defined methods available to all classes, but we can create our own as well.
+
+        class Car {
+
+            int modelYear;
+            public Car(int year) {
+                modelYear = year;
+            }
+
+            //Declare the method 
+            public void startEngine() {
+                System.out.println("Vroom!");
+            }
+
+            public static void main(String[] args){
+                Car myFastCar = new Car(2007);
+            //Use the method
+            myFastCar.startEngine();
+            }
+        }
+
+Methods Customisation
+    You can customise methods to accept parameters.
+            ...
+            public void startEngine() {
+                System.out.println("Vroom!");
+            }
+
+            public void drive(int distanceInMiles) {
+                System.out.println("Miles driven: " + distanceInMiles);
+            }
+
+            public static void main(String[] args){
+                Car myFastCar = new Car(2007);
+            //Use the method
+            myFastCar.startEngine();
+            }
+        }
+
+Method Types
+    Essentially a check to make sure a method returns the correct data type.
+    'void' means that no data is returned, but you can specify int, char, ect to specify the type of data.
+    
+            ...
+            public void drive(int distanceInMiles) {
+                System.out.println("Your car drove " + distanceInMiles + " miles!");
+            }
+
+            public int numberOfTires() {
+                return 4;
+            }
+            ...
+            public static void main(String[] args){
+
+            Car myFastCar = new Car(2007)
+            myFastCar.startEngine();
+            myFastCar.drive(1628);
+
+            int tires = myFastCar.numberOfTires();
+            System.out.println(tires);
+                }
+            }
+
+Inheritance
+    You can join multiple java files together using the extends keyword.
+        
+        class Car extends Vehicle {
+        int modelYear;
+
+        public Car(int year) {
+        modelYear = year;
+        }
+    ...
+        class Vehicle {
+        public void checkBatteryStatus() {
+        System.out.println("The battery is fully charged and ready to go!");
+            }
+        }

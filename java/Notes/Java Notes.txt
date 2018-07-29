@@ -1,0 +1,57 @@
+///Basic Stuff
+
+Basic code is laid out like this.
+
+public class Name {
+	public static void main(String[] args) {
+        // CODE GOES HERE
+	}
+}
+
+//There are a couple of different types of data types
+    Interger (int) - All positive and negative numbers, including zero.
+        20102991
+
+    Boolean (boolean) - Can only be either true or false.
+        true
+    
+    Character (char) - Used to represent single characters. Must be in quotes.
+        'g'
+
+    You can declare them like this
+    	int myNumber = 42;
+		boolean isFun = true; 
+		char movieRating = 'A'; 
+
+Comments
+
+You can write comments like this
+//Comment
+
+/*
+
+Multi Line Comment
+
+*/
+
+Arithmatic
+Basic Math in java
+    int sum = 34 + 113;
+    int difference = 91 - 205;
+    int product = 2 * 8; 
+    int quotient = 45 / 3;
+    int modulo = 15 % 6; (Modulo is the remainder of two numbers)
+
+Relational Operators
+Returns either true or false
+    < : less than.
+    <=: less than or equal to.
+    >: greater than.
+    >=: greater than or equal to.
+
+Equity Operators
+Checks if something is the same and turns it into a boolean
+
+char myChar = 'A';
+int myInt = -2;
+System.out.println(myChar == myInt);
