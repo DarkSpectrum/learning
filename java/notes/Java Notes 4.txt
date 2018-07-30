@@ -1,0 +1,72 @@
+//Data Scructures
+
+For Loop: Repeatedly runs a block of code until a specified condition is met.
+    Comprises of the following parts
+    Initialisation - int variable named counter is initialized to the value of 0 before the loop is run.
+    Test Condition - boolean that is evaluated before the code is run
+    Increment - each time the loop completes, the increment is run.
+
+        for (int counter = 0; counter < 5; counter++) {
+            System.out.println("The counter value is: " + counter);
+        }
+
+    executes the code block in the sample code above because the initial value of counter is less than 5, which passes the test condition.
+    The value of counter is then incremented by 1 in the increment.
+    The code block will execute again because counter is still less than 5. This cycle will continue until counter is no longer less than 5.
+    Please note that similar to the if-then statement, no semicolon is necessary.
+
+ArrayList (java.util.ArrayList)
+    The ArrayList stores a list of data of a specified type.
+        ArrayList<Integer> weeklyTemperatures = new ArrayList<Integer>();
+    We can then add to that datatype by calling the .add method on the ArrayList
+        weeklyTemperatures.add(25);
+    We can get our temperature by calling the .get method (Arrays start at 0!)
+        System.out.println( quizGrades.get(0) );
+
+ArrayList Insertion
+    We can also add elements into the ArrayList with more precision.
+        quizGrades.add(0, 100);
+    The add method will insert the grade 100 at the first position (0) into the list.
+
+ArrayLists and For Loops
+    We can join ArrayLists and For Loops together!
+    Initialization: int variable i is set to 0 which is the first index of an ArrayList.
+    Test condition: the code in the block will run as long the boolean is true
+    Increment: The code in this block will execute after each loop.
+        for (int i = 0; i < quizGrades.size(); i++) {
+            System.out.println( quizGrades.get(i) );
+        }
+
+For Each Loop
+    Most for loops are very similar, you can shortcut it like this.
+        for (Integer grade : quizGrades){
+            System.out.println(grade);
+        }
+    The colon can be read as in, so if the code was a sentence, it would be like this.
+    for each Integer element (grade) in quizGrades, print out the value of grade."
+
+HashMap
+    Kind of like a database, contacts a set of keys and a value for each key.
+        HashMap<String, Integer> myFriends = new HashMap<String, Integer>();
+    We create a HashMap object called myFriends. which will store keys of String data types and values of type Integer.
+    Note: the String object allows you to store multiple characters, such as a word in quotations (e.g. "Rats!").
+
+HashMap Manipulation
+    We can call the .put method on the HashMap to fill a HashMap
+        myFriends.put("Mark", 24);
+        myFriends.put("Cassandra", 25);
+        myFriends.put("Zenas", 21);
+
+HashMap Access
+    We can call the .get method to call the HashMap method. We must specify the key to get the value.
+        myFriends.put("Zenas", 21);
+        System.out.println( myFriends.get("Zenas") );
+
+HashMap Iteration
+    We can also access properties of a HashMap, such as the number of entities.
+        System.out.println( myFriends.size() );
+    
+    We can then use a for each loop to iterate over each key in myFriends.
+        for (String name: myFriends.keySet()) {
+            System.out.println(name + " is age: " + myFriends.get(name));
+        }
