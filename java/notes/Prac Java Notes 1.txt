@@ -1,0 +1,12 @@
+//Practical Java Notes 1
+
+public class CLASS {
+    public static String STATIC-VARIABLE = "VALUE";
+
+    public static void main(String args[]){
+        CLASS OBJECT1 = new CLASS(); //makes OBJECT1.STATIC-VARIABLE
+        
+        System.out.println(OBJECT1.STATIC-VARIABLE);
+    }
+    
+}
