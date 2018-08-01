@@ -1,15 +1,16 @@
-public class FunctionExample {
+class FunctionExample {
 
     public static void main(String[] args) {
-    int a = 11;
+    // set int variables
+	int a = 11;
     int b = 6;
-    int c = PrintFunction(a, b);
-    System.out.println(c);
+	// send to print function
+    PrintFunction(a, b);
     }
 
     public static int PrintFunction(int n1, int n2) {
-        int num1 = n1;
-        int num2 = n2;
-        return (num1);
+        // print the string using a the string quotes to create a space between the ints
+		System.out.println(n1+" "+n2);
+        return (0);
     }
-   }
+}
